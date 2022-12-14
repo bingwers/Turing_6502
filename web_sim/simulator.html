@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<head>
+
+</head>
+<body style='margin: 0'>
+    <div>
+        <canvas id='states_canvas' width="1120" height="720" style="display:inline-block;"></canvas>
+        <div style="display:inline-block; width: 300px;">
+            <div style='background-color: #E0E0E0; margin: 4px;'>
+                <h3>HOVER INFO</h3>
+                <div id='hover_info'></div>
+            </div>
+            <div style='background-color: #E0E0E0; margin: 4px;'>
+                <h3>MACHINE INFO</h3>
+                <div id='machine_info'></div>
+            </div>
+            <div style='background-color: #E0E0E0; margin: 4px;'>
+                <h3>KEYBOARD CONTROLS</h3>
+                <div id='machine_info'>
+                    <b>Enter</b>: advance by 1 step <br>
+                    <b>u</b>: advance 1 Uop <br>
+                    <b>i</b>: advance 1 Uinst <br>
+                    <b>I</b>: advance 1 ISA Instruction <br>
+                    <b>j</b>: advance 1000000 steps
+                </div>
+            </div>
+        </div>
+        <div style="display:inline-block; width: 300px;">
+            <select id='program_select'>
+                Select Program:
+                <option value='sum'>Sum 1-10</option>
+                <option value='primes'>Count primes under 100</option>
+            </select>
+            <div style='background-color: #E0E0E0; margin: 4px;'>
+                <h3>MEMORY INFO</h3>
+                <div id='mem_info' style='font-family: monospace; font-size: 1em;'></div>
+            </div>
+        </div>
+    </div>
+    <canvas id='tapes_canvas' width="1920" height="350"'></canvas>
+
+    <script src="ucode_description.js"></script>
+    <script src="tm_sim_step.js"></script>
+    <script src="tm_transitions.js"></script>
+    <script src="full_sim.js"></script>
+    <script src="tmdraw.js"></script>
+</body>
